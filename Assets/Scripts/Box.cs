@@ -1,15 +1,13 @@
 using UnityEngine;
 
-public class Box : MonoBehaviour
-{
+public class Box : MonoBehaviour {
   public int index;
   public Mark mark;
   public bool isMarked;
 
   private SpriteRenderer spriteRenderer;
 
-  private void Awake()
-  {
+  private void Awake() {
     spriteRenderer = GetComponent<SpriteRenderer>();
 
     index = transform.GetSiblingIndex();
@@ -17,8 +15,7 @@ public class Box : MonoBehaviour
     isMarked = false;
   }
 
-  public void SetAsMarked(Sprite sprite, Mark mark, Color color)
-  {
+  public void SetAsMarked(Sprite sprite, Mark mark, Color color) {
     isMarked = true;
     this.mark = mark;
 

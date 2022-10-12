@@ -1,5 +1,4 @@
-public enum Mark
-{
+public enum Mark {
   None,
   X,
   O
