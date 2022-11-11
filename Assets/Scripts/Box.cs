@@ -7,12 +7,19 @@ public class Box : MonoBehaviour {
 
   private SpriteRenderer spriteRenderer;
 
+  Quaternion rotation;
+
+  void LateUpdate() {
+    transform.rotation = rotation;
+  }
+
   private void Awake() {
     spriteRenderer = GetComponent<SpriteRenderer>();
 
     index = transform.GetSiblingIndex();
     mark = Mark.None;
     isMarked = false;
+    rotation = transform.rotation;
   }
 
   public void SetAsMarked(Sprite sprite, Mark mark, Color color) {
